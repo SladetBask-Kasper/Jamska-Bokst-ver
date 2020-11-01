@@ -4,7 +4,7 @@
 #define MyAppName "Jamska Bokstäver"
 #define MyAppVersion "1.0"
 #define MyAppPublisher "Kasper"
-#define MyAppURL "https://github.com/SladetBask-Kasper/"
+#define MyAppURL "https://github.com/SladetBask-Kasper/Jamska-Bokstaver/"
 #define MyAppExeName "Jamska_Bokstäver.exe"
 
 [Setup]
@@ -35,12 +35,22 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Source: "C:\Users\Admin\Desktop\Jamska_Bokstäver.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
-[Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+; Vi behöver inga icons för detta program.
+;[Icons]
+;Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 [Registry]
 ;current user only
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "JamskaBokstaver"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekey;
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "JamskaBokstäver"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekey;
 
+; Källa för följande kod : https://stackoverflow.com/a/27045785
+[Code]
+function InitializeUninstall(): Boolean;
+  var ErrorCode: Integer;
+begin
+  ShellExec('open','taskkill.exe','/f /im {#MyAppExeName}','',SW_HIDE,ewNoWait,ErrorCode);
+  ShellExec('open','tskill.exe',' {#MyAppName}','',SW_HIDE,ewNoWait,ErrorCode);
+  result := True;
+end;
