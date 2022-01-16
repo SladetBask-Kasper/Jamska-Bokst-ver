@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ============== Standard rader från AHK ============== ;
 
 ; Min kod startar här.
-; Listan av bosktäver : æÆ ôÔ óÓ øØ ß
+; Listan av bosktäver : æÆ ôÔ øØ, Roosiansk: ăĂ ěĚ ĭĬ ŏŎ ŭŬ
 
 ; === för æÆ === ;
 ^!ä::
@@ -24,33 +24,18 @@ Else
 return
 
 ; === För ôÔ === ;
-^!o::
+^!å::
 If GetKeyState("Capslock", "T")
     Send, Ô
 Else
     Send, ô
 return
-^!+O::
+^!+Å::
 If GetKeyState("Capslock", "T")
     Send, ô
 Else
     Send, Ô
 return
-
-; === För óÓ === ;
-
-;^o::
-;If GetKeyState("Capslock", "T")
-;    Send, Ó
-;Else
-;    Send, ó
-;return
-;^+O::
-;If GetKeyState("Capslock", "T")
-;    Send, ó
-;Else
-;    Send, Ó
-;return
 
 ; === för øØ === ;
 ^!ö::
@@ -69,7 +54,7 @@ return
 ; === för ß (det finns bara liten, ett dubbel s som stor boksav är bara "Ss") === ;
 ^!s::
 If GetKeyState("Capslock", "T")
-    Send, Ss
+    Send, ß
 Else
     Send, ß
 return
@@ -77,5 +62,75 @@ return
 If GetKeyState("Capslock", "T")
     Send, ß
 Else
-    Send, Ss
+    Send, ß
+return
+
+; === för ăĂ === ;
+^!a::
+If GetKeyState("Capslock", "T")
+    Send, Ă
+Else
+    Send, ă
+return
+^!+A::
+If GetKeyState("Capslock", "T")
+    Send, ă
+Else
+    Send, Ă
+return
+
+; === för ěĚ === ;
+^!e::
+If GetKeyState("Capslock", "T")
+    Send, Ě
+Else
+    Send, ě
+return
+^!+E::
+If GetKeyState("Capslock", "T")
+    Send, ě
+Else
+    Send, Ě
+return
+
+; === för ĭĬ === ;
+^!i::
+If GetKeyState("Capslock", "T")
+    Send, Ĭ
+Else
+    Send, ĭ
+return
+^!+I::
+If GetKeyState("Capslock", "T")
+    Send, ĭ
+Else
+    Send, Ĭ
+return
+
+; === för ŏŎ === ;
+^!o::
+If GetKeyState("Capslock", "T")
+    Send, Ŏ
+Else
+    Send, ŏ
+return
+^!+O::
+If GetKeyState("Capslock", "T")
+    Send, ŏ
+Else
+    Send, Ŏ
+return
+
+; === för ŭŬ === ;
+^!u::
+If GetKeyState("Capslock", "T")
+    Send, Ŭ
+Else
+    Send, ŭ
+return
+^!+U::
+If GetKeyState("Capslock", "T")
+    Send, ŭ
+Else
+    Send, Ŭ
 return
