@@ -2,8 +2,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Jamska Bokstäver"
-#define MyAppVersion "1.0"
-#define MyAppPublisher "Kasper"
+#define MyAppVersion "3.1"
+#define MyAppPublisher "N Kasper"
 #define MyAppURL "https://github.com/SladetBask-Kasper/Jamska-Bokstaver/"
 #define MyAppExeName "Jamska_Bokstäver.exe"
 
@@ -21,7 +21,7 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-LicenseFile=C:\Users\Admin\Desktop\LICENSE.txt
+LicenseFile=LICENSE
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 OutputDir=C:\Users\Admin\Desktop
@@ -34,10 +34,10 @@ WizardStyle=modern
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "C:\Users\Admin\Desktop\Jamska_Bokstäver.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Jamska_Bokstäver.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
-; Vi behöver inga icons för detta program.
+; Vi behöver inga skrivbordsgenvägar för detta program.
 ;[Icons]
 ;Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
