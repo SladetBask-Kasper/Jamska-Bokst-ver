@@ -134,3 +134,17 @@ If GetKeyState("Capslock", "T")
 Else
     Send, Ŭ
 return
+
+; === för ʿayn och glottal klusil ʾ === ;
+^!´::
+If GetKeyState("Capslock", "T")
+    Send, ʿ
+Else
+    Send, ʾ
+return
+^!+´::
+If GetKeyState("Capslock", "T")
+    Send, ʾ
+Else
+    Send, ʿ
+return
