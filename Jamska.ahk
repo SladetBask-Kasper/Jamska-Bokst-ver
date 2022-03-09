@@ -148,3 +148,31 @@ If GetKeyState("Capslock", "T")
 Else
     Send, ʿ
 return
+
+; === för ɬꞭ === ;
+^!l::
+If GetKeyState("Capslock", "T")
+    Send, Ɬ
+Else
+    Send, ɬ
+return
+^!+L::
+If GetKeyState("Capslock", "T")
+    Send, ɬ
+Else
+    Send, Ɬ
+return
+
+; === för ħĦ === ;
+^!h::
+If GetKeyState("Capslock", "T")
+    Send, Ħ
+Else
+    Send, ħ
+return
+^!+H::
+If GetKeyState("Capslock", "T")
+    Send, ħ
+Else
+    Send, Ħ
+return

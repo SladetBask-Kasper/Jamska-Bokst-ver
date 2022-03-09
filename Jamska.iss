@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Jamska Bokstäver"
-#define MyAppVersion "3.1"
+#define MyAppVersion "3.2"
 #define MyAppPublisher "N Kasper"
 #define MyAppURL "https://github.com/SladetBask-Kasper/Jamska-Bokstaver/"
 #define MyAppExeName "Jamska_Bokstäver.exe"
