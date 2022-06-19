@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Jamska Bokstäver"
-#define MyAppVersion "3.2"
+#define MyAppVersion "3.3"
 #define MyAppPublisher "N Kasper"
 #define MyAppURL "https://github.com/SladetBask-Kasper/Jamska-Bokstaver/"
 #define MyAppExeName "Jamska_Bokstäver.exe"
@@ -37,7 +37,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Source: "Jamska_Bokstäver.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
-; Vi behöver inga skrivbordsgenvägar för detta program.
+; Vi behÃ¶ver inga skrivbordsgenvÃ¤gar fÃ¶r detta program.
 ;[Icons]
 ;Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
@@ -45,9 +45,9 @@ Source: "Jamska_Bokstäver.exe"; DestDir: "{app}"; Flags: ignoreversion
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 [Registry]
 ;current user only
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "JamskaBokstäver"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekey;
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "JamskaBokstÃ¤ver"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekey;
 
-; Källa för följande kod : https://stackoverflow.com/a/27045785
+; KÃ¤lla fÃ¶r fÃ¶ljande kod : https://stackoverflow.com/a/27045785
 [Code]
 function InitializeUninstall(): Boolean;
   var ErrorCode: Integer;

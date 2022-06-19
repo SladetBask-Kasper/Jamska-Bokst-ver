@@ -8,6 +8,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Min kod startar här.
 ; Listan av bosktäver : æÆ ôÔ øØ, Roosiansk: ăĂ ěĚ ĭĬ ŏŎ ŭŬ
+; Plus lite andra
 
 ; === för æÆ === ;
 ^!ä::
@@ -175,4 +176,32 @@ If GetKeyState("Capslock", "T")
     Send, ħ
 Else
     Send, Ħ
+return
+
+; === för ðÐ === ;
+^!d::
+If GetKeyState("Capslock", "T")
+    Send, Ð
+Else
+    Send, ð
+return
+^!+D::
+If GetKeyState("Capslock", "T")
+    Send, ð
+Else
+    Send, Ð
+return
+
+; === för þÞ === ;
+^!f::
+If GetKeyState("Capslock", "T")
+    Send, Þ
+Else
+    Send, þ
+return
+^!+F::
+If GetKeyState("Capslock", "T")
+    Send, þ
+Else
+    Send, Þ
 return
